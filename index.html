@@ -229,7 +229,7 @@
     </div>
 
     <!-- Audio -->
-    <audio id="welcomeAudio" src="welcome-sound.mp3" preload="auto"></audio>
+    <audio id="welcomeAudio" src="welcome-siound.mp3" preload="auto"></audio>
     <audio id="qualifiedSound" src="qualified-sound.mp3" preload="auto"></audio>
     <audio id="unqualifiedSound" src="unqualified-sound.mp3" preload="auto"></audio>
 
@@ -253,14 +253,14 @@
     });
 
     // Dynamic job/company - customise here
-    const job = "Web Developer";
-    const company = "TechNova";
+    const job = "👉YOUR_POST👈";
+    const company = "👉OUR_COMPANY👈";
     const phone = "254114935564"; // no + sign
 
     function sendWhatsApp(qualified) {
       const soundId = qualified ? "qualifiedSound" : "unqualifiedSound";
       const message = qualified
-        ? `We are pleased to say that you are qualified for the job of ${job} at ${company}.`
+        ? `We are pleased to announce that you are qualified for the job of ${job} at ${company}.`
         : "We are sorry but you are unqualified for our company.";
       document.getElementById(soundId).play().catch(() => {});
       setTimeout(() => {
